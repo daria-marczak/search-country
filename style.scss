@@ -9,7 +9,7 @@ $silver: #bdc3c7;
 
 body {
 	font-family: $main-font;
-	background-color: #ecf0f1;
+	background-color: $asphalt;
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -26,7 +26,7 @@ h1, h2 {
 }
 
 button {
-	background-color: $asphalt;
+	background-color: $orange;
 	padding: 10px 5px;
 	border: none;
 	color: white;
@@ -39,4 +39,10 @@ input {
 	padding: 15px 20px;
 	border: none;
 	width: 70%;
+}
+
+.box {
+	width: 100%;
+	background-color: $grayish;
+	padding: 1rem;
 }

@@ -1,10 +1,6 @@
 var url = "https://restcountries.eu/rest/v1/name/";
 var countriesList = $("#countries");
 
-
-$("input[type = text]").on("keydown", function(e) {
-    if (e.which == 13) {
-        e.preventDefault();
         $("#search").click(searchCountries);
 
         function searchCountries() {
@@ -20,12 +16,11 @@ $("input[type = text]").on("keydown", function(e) {
             function showCountriesList(resp) {
                 countriesList.empty();
         	    resp.forEach(function(item){
-        	   		$("<h3>").text(item.name).appendTo(countriesList);
-        	   		$("<p>").text("Country's capital is " + item.capital).appendTo(countriesList);
-        	   		$("<p>").text("The country currency is " + item.currencies).appendTo(countriesList);
-        	   		$("<p>").text("People of " + item.name + " speak " + item.languages).appendTo(countriesList);
+                    var $countriesBox = $("<div>").addClass("box").appendTo(countriesList)
+        	   		$("<h3>").text(item.name).appendTo(countriesBox);
+        	   		$("<p>").text("Country's capital is " + item.capital).appendTo(countriesBox);
+        	   		$("<p>").text("The country currency is " + item.currencies).appendTo(countriesBox);
+        	   		$("<p>").text("People of " + item.name + " speak " + item.languages).appendTo(countriesBox);
         		});
             }
         }
-    }
-});
