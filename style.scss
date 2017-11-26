@@ -18,6 +18,9 @@ body {
 .container {
 	width: 80%;
 	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 h1, h2 {
@@ -41,8 +44,25 @@ input {
 	width: 70%;
 }
 
+.list {
+	display: flex;
+	flex-wrap:wrap;
+	align-items: flex-start;
+	justify-content: center;
+	color: white;
+}
+
 .box {
-	width: 100%;
+	width: 350px;
+	min-height: 450px;
 	background-color: $grayish;
 	padding: 1rem;
+	display: inline-block;
+	text-align: left;
+	text-wrap: wrap;
+	margin-left: 1rem;
+	margin-bottom: 2rem;
+	p {
+		line-height: 1.5rem;
+	}
 }

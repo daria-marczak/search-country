@@ -16,11 +16,12 @@ var countriesList = $("#countries");
             function showCountriesList(resp) {
                 countriesList.empty();
         	    resp.forEach(function(item){
-                    var $countriesBox = $("<div>").addClass("box").appendTo(countriesList)
+                    var countriesBox = $("<div>").addClass("box").appendTo(countriesList);
+                    var flagBox = $("<span>").text(item.flags).addClass("flag").appendTo(flagBox);
         	   		$("<h3>").text(item.name).appendTo(countriesBox);
         	   		$("<p>").text("Country's capital is " + item.capital).appendTo(countriesBox);
         	   		$("<p>").text("The country currency is " + item.currencies).appendTo(countriesBox);
-        	   		$("<p>").text("People of " + item.name + " speak " + item.languages).appendTo(countriesBox);
+        	   		$("<p>").text("People of " + item.name + " speak " + item.languages.name).appendTo(countriesBox);
         		});
             }
         }
