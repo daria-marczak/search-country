@@ -23,7 +23,7 @@ $("input[type = text]").on("keydown", function(e) {
         	   		$("<h3>").text(item.name).appendTo(countriesList);
         	   		$("<p>").text("Country's capital is " + item.capital).appendTo(countriesList);
         	   		$("<p>").text("The country currency is " + item.currencies).appendTo(countriesList);
-        	   		$("<p>").text("People of " + item.name + " speak " + item.languages).appendTo(countriesList);
+        	   		$("<p>").text("People of " + item.name + " speak " + item.languages.name).appendTo(countriesList);
         		});
             }
         }
