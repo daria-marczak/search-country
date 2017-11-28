@@ -21,7 +21,7 @@ function searchCountries() {
             $("<h3>").text(item.name).appendTo(countriesBox);
             $("<p>").text("Country's capital is " + item.capital).appendTo(countriesBox);
             $("<p>").text("The country currency is " + item.currencies).appendTo(countriesBox);
-            $("<p>").text("People of " + item.name + " speak " + item.languages.name).appendTo(countriesBox);
+            $("<p>").text("People of " + item.name + " speak " + item.languages[0].name).appendTo(countriesBox);
         });
     }
 }
